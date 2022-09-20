@@ -4,6 +4,8 @@ import {
   NavBar,
   ContactsList,
   Filter,
+  ResponsiveAppBar,
+  ActionButton,
 } from 'components';
 import { useFilteredContacts } from 'hooks/useFilteredContacts';
 import { useToggle } from 'hooks/useToggle';
@@ -14,6 +16,7 @@ export const App = () => {
 
   return (
     <Container>
+      <ResponsiveAppBar/>
       <NavBar />
       {isOpenAddForm && <AddContactsForm type={'add'} />}
       {isOpenUpdateForm && <AddContactsForm type={'update'} />}
@@ -22,6 +25,7 @@ export const App = () => {
       )}
 
       <ContactsList contacts={filteredContacts} />
+      <ActionButton/>
     </Container>
   );
 };

@@ -7,6 +7,7 @@ const MainContainer = styled.div`
   height: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
 `;
 
 const Container = ({ children }) => {
