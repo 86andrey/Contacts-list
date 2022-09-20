@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <Wrapper>
-      <Title>PHONEBOOK</Title>
+      
       <Button
         onClick={handleAddClick}
         isOpen={isOpenAddForm}

@@ -183,12 +183,6 @@ const ResponsiveAppBar = () => {
               <AddIcon />
             </StyledFab>
             <Box sx={{ flexGrow: 1 }} />
-            <IconButton color="inherit">
-              <SearchIcon />
-            </IconButton>
-            <IconButton color="inherit">
-              <MoreIcon />
-            </IconButton>
           </Toolbar>
         </AppBar>
       </React.Fragment>
