@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 10px 20px;
-  background-color: #a442f5;
+  background-color: #1976d2;
+  margin-top: 65px;
 `;
 
 export const Title = styled.div`
@@ -20,12 +21,12 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
 
-  color: ${({ isOpen }) => (isOpen ? '#fff' : '#242323')};
+  color: ${({ isOpen }) => (isOpen ? '#242323' : '#fff')};
   font-size: 30px;
   border: none;
   border-radius: 50%;
-  border: 1px solid;
-  border-color: ${({ isOpen }) => (isOpen ? '#fff' : '#242323')};
+  border: 2px solid;
+  border-color: ${({ isOpen }) => (isOpen ? '#242323' : '#fff')};
 
   background-color: transparent;
 
@@ -37,7 +38,7 @@ export const Button = styled.button`
   }
 
   :hover {
-    color: #fff;
-    border-color: #fff;
+    color: #f5a41e;
+    border-color: #f5a41e;
   }
 `;
