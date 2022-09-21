@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import { FilterWrapper, Input, Title } from './Filter.styled';
-
 const Filter = ({ onSearch, value }) => {
   return (
     <FilterWrapper>
       <Title>Filter</Title>
-
-      <Input onChange={onSearch} value={value} type="text" name="filter" />
+      <Input onChange={onSearch} value={value} type="text" name="filter" placeholder='Search contact . . .'/>       
     </FilterWrapper>
   );
 };
