@@ -1,4 +1,4 @@
-import { Button, Wrapper, Title } from './NavBar.styled';
+import { Button, Wrapper} from './NavBar.styled';
 import { RiUserSearchLine, RiUserAddLine } from 'react-icons/ri';
 import { useToggle } from 'hooks/useToggle';
 
