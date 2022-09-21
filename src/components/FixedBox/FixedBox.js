@@ -11,9 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { styled } from '@mui/material/styles';
-import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -21,15 +18,6 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const StyledFab = styled(Fab)({
-    position: 'absolute',
-    zIndex: 1,
-    top: -30,
-    left: 0,
-    right: 0,
-    margin: '0 auto',
-  });
 
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
@@ -69,7 +57,6 @@ const ResponsiveAppBar = () => {
             >
               PHONEBOOK
             </Typography>
-
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -138,10 +125,22 @@ const ResponsiveAppBar = () => {
             </Box>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Button sx={{ bgcolor: '#708fad' }} variant="contained">
+              <Button
+                sx={{ bgcolor: '#708fad' }}
+                variant="contained"
+                component="label"
+              >
                 Register
+                <input hidden accept="/*" multiple type="file" />
               </Button>
-              <Button sx={{ ml: 2, bgcolor: '#708fad' }} variant="contained">
+
+              <Button
+                onClick={() => {
+                  alert('clicked');
+                }}
+                sx={{ ml: 2, bgcolor: '#708fad' }}
+                variant="contained"
+              >
                 Login
               </Button>
             </Box>
@@ -179,21 +178,6 @@ const ResponsiveAppBar = () => {
           </Toolbar>
         </Container>
       </AppBar>
-
-      <React.Fragment>
-        <AppBar
-          position="fixed"
-          color="primary"
-          sx={{ top: 'auto', bottom: 0 }}
-        >
-          <Toolbar>
-            <StyledFab color="secondary" aria-label="add">
-              <AddIcon />
-            </StyledFab>
-            <Box sx={{ flexGrow: 1 }} />
-          </Toolbar>
-        </AppBar>
-      </React.Fragment>
     </>
   );
 };

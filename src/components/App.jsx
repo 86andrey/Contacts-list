@@ -5,7 +5,7 @@ import {
   ContactsList,
   Filter,
   ResponsiveAppBar,
-  
+  NavBarButton,
 } from 'components';
 import { useFilteredContacts } from 'hooks/useFilteredContacts';
 import { useToggle } from 'hooks/useToggle';
@@ -25,6 +25,7 @@ export const App = () => {
       )}
 
       <ContactsList contacts={filteredContacts} />
+      <NavBarButton/>
     </Container>
   );
 };
