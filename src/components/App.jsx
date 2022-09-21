@@ -18,8 +18,8 @@ export const App = () => {
     <Container>
       <ResponsiveAppBar/>
       <NavBar />
-      {isOpenAddForm && <AddContactsForm type={'add'} />}
-      {isOpenUpdateForm && <AddContactsForm type={'update'} />}
+      {/* {isOpenAddForm && <AddContactsForm type={'add'} />} */}
+      {/* {isOpenUpdateForm && <AddContactsForm type={'update'} />} */}
       {isOpenFilter && (
         <Filter value={filter} onSearch={e => setFilter(e.target.value)} />
       )}

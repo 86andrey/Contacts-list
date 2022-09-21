@@ -14,7 +14,7 @@ export const FormInner = styled.div`
   align-items: flex-start;
   margin: 0 auto 20px;
   text-align: start;
-  width: 300px;
+  min-width: 100px;
 `;
 
 export const Label = styled.label`
@@ -28,7 +28,7 @@ export const Label = styled.label`
   }
   /* align-items: flex-start;
   margin: 0 auto;
-  width: 300px; */
+  min-width: 100px; */
 `;
 
 export const Input = styled(Field)`

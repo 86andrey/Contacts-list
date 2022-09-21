@@ -66,12 +66,12 @@ const AddContactsForm = ({ type }) => {
               <Button type="submit">
                 {type === 'add' ? 'Add contact' : 'Update contact'}
               </Button>
-              <Button
+              {/* <Button
                 onClick={type === 'add' ? toggleAddForm : toggleUpdateForm}
                 type="button"
               >
                 Cancel
-              </Button>
+              </Button> */}
             </Form>
           </FormWrapper>
         </Formik>
