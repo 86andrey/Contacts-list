@@ -18,7 +18,8 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const [auth, setAuth] = React.useState(true);
+  
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
   };
@@ -101,7 +102,7 @@ const ResponsiveAppBar = () => {
               href=""
               sx={{
                 mr: 2,
-                display: { xs: 'flex', md: 'none' },
+                display: { xs: 'none', md: 'none' },
                 flexGrow: 1,
                 fontFamily: 'monospace',
                 fontWeight: 700,
@@ -123,9 +124,9 @@ const ResponsiveAppBar = () => {
                 </Button>
               ))}
             </Box>
-
-            <Box sx={{ flexGrow: 0 }}>
-              <Button
+{auth && (
+            <Box sx={{ flexGrow: 0 }} >
+              <Button 
                 sx={{ bgcolor: '#708fad' }}
                 variant="contained"
                 component="label"
@@ -144,7 +145,8 @@ const ResponsiveAppBar = () => {
                 Login
               </Button>
             </Box>
-
+            )}
+            {!auth && (
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -174,7 +176,8 @@ const ResponsiveAppBar = () => {
                   </MenuItem>
                 ))}
               </Menu>
-            </Box>
+              </Box>
+               )}
           </Toolbar>
         </Container>
       </AppBar>

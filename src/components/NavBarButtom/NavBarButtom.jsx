@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
-import DialogTitle from '@mui/material/DialogTitle';
+// import DialogTitle from '@mui/material/DialogTitle';
 import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -48,11 +48,8 @@ const NavBarButton = () => {
                             <Button onClick={handleClickOpen}>
                                 <AddIcon sx={{ color: '#fff' }} />
                             </Button>
-                            <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
-                                <AddContactsForm type={'add'}/>
-                                
-                                
-                                
+                            <Dialog open={open} onClose={handleClose}>
+                                <AddContactsForm type={'add'}/>                          
                                 <DialogActions>
                                     <Button onClick={handleClose}>Cancel</Button>                                    
                                 </DialogActions>
