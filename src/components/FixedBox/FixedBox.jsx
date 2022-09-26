@@ -18,7 +18,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [auth, setAuth] = React.useState(true);
+  const [auth, setAuth] = React.useState(false);
   
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
@@ -124,7 +124,7 @@ const ResponsiveAppBar = () => {
                 </Button>
               ))}
             </Box>
-{auth && (
+   {auth && (
             <Box sx={{ flexGrow: 0 }} >
               <Button 
                 sx={{ bgcolor: '#708fad' }}
@@ -146,7 +146,7 @@ const ResponsiveAppBar = () => {
               </Button>
             </Box>
             )}
-            {!auth && (
+    {!auth && (
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
