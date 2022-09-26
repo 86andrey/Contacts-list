@@ -17,6 +17,7 @@ import { useToggle } from 'hooks/useToggle';
 
 const ContactItem = ({ id, name, number }) => {
   const [removeContact, { isLoading }] = useRemoveContactsMutation();
+
   const dispatch = useDispatch();
   const { isOpenAddForm, isOpenUpdateForm, toggleAddForm, toggleUpdateForm } =
     useToggle();

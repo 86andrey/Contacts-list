@@ -4,7 +4,11 @@ const Filter = ({ onSearch, value }) => {
   return (
     <FilterWrapper>
       <Title>Filter</Title>
-      <Input onChange={onSearch} value={value} type="text" name="filter" placeholder='Search contact . . .'/>       
+      <Input onChange={onSearch}
+        value={value}
+        type="text"
+        name="filter"
+        placeholder='Search contact' />       
     </FilterWrapper>
   );
 };

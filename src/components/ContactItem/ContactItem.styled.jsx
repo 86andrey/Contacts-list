@@ -22,10 +22,10 @@ export const Contact = styled.p`
 
 export const IconUser = styled(RiUserFill)`
   padding: 3px;
-  border: 1px solid #ab42f5;
+  border: 1px solid #099e9e;
   border-radius: 50%;
   margin-right: 10px;
-  color: #ab42f5;
+  color: #09f7f7;
 `;
 
 export const Button = styled.button`

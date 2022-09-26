@@ -15,6 +15,7 @@ import { useToggle } from 'hooks/useToggle';
 
 const NavBarButton = () => {
     const [open, setOpen] = React.useState(false);
+    const { isOpenUpdateForm } = useToggle();
     
     const StyledFab = styled(Fab)({
         position: 'absolute',
@@ -48,7 +49,10 @@ const NavBarButton = () => {
                             <Button onClick={handleClickOpen}>
                                 <AddIcon sx={{ color: '#fff' }} />
                             </Button>
+
+                            
                             <Dialog open={open} onClose={handleClose}>
+                                {isOpenUpdateForm && <AddContactsForm type={'update'} />}
                                 <AddContactsForm type={'add'}/>                          
                                 <DialogActions>
                                     <Button onClick={handleClose}>Cancel</Button>                                    

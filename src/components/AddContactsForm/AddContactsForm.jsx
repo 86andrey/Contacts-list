@@ -16,7 +16,7 @@ import Loader from '../Loader/Loader';
 const AddContactsForm = ({ type }) => {
   const { initialValues, schema, handleAddContact, handleUpdateContact } =
     useForm();
-  const { toggleAddForm, toggleUpdateForm } = useToggle();
+  const { toggleUpdateForm } = useToggle();
   const contactId = useSelector(state => state.updateContactForm.id);
   const { data, isFetching } = useGetContactByIdQuery(contactId, {
     skip: !contactId,
@@ -66,12 +66,12 @@ const AddContactsForm = ({ type }) => {
               <Button type="submit">
                 {type === 'add' ? 'Add contact' : 'Update contact'}
               </Button>
-              {/* <Button
-                onClick={type === 'add' ? toggleAddForm : toggleUpdateForm}
+              {type === 'update' && <Button
+                onClick={toggleUpdateForm}
                 type="button"
               >
                 Cancel
-              </Button> */}
+              </Button>}
             </Form>
           </FormWrapper>
         </Formik>

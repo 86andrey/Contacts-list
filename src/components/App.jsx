@@ -11,7 +11,7 @@ import { useFilteredContacts } from 'hooks/useFilteredContacts';
 
 export const App = () => {
   const [filteredContacts, filter, setFilter] = useFilteredContacts();
-  // const { isOpenFilter, isOpenAddForm, isOpenUpdateForm } = useToggle();
+  // const { isOpenUpdateForm } = useToggle();
 
   return (
     <Container>
