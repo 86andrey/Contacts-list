@@ -5,13 +5,14 @@ import {
   Filter,
   ResponsiveAppBar,
   NavBarButton,
+  Modal,
 } from 'components';
 import { useFilteredContacts } from 'hooks/useFilteredContacts';
-// import { useToggle } from 'hooks/useToggle';
+import { useToggle } from 'hooks/useToggle';
 
 export const App = () => {
   const [filteredContacts, filter, setFilter] = useFilteredContacts();
-  // const { isOpenUpdateForm } = useToggle();
+  const { isOpenUpdateForm } = useToggle();
 
   return (
     <Container>
@@ -19,10 +20,9 @@ export const App = () => {
       {/* <NavBar /> */}
       {/* {isOpenAddForm && <AddContactsForm type={'add'} />} */}
       {/* {isOpenUpdateForm && <AddContactsForm type={'update'} />} */}
-      
-        <Filter value={filter} onSearch={e => setFilter(e.target.value)} />
-      
+      {isOpenUpdateForm && <Modal/>}
 
+      <Filter value={filter} onSearch={e => setFilter(e.target.value)} />
       <ContactsList contacts={filteredContacts} />
       <NavBarButton/>
     </Container>

@@ -7,3 +7,4 @@ export { default as ContactItem } from './ContactItem/ContactItem';
 export { default as Loader } from './Loader/Loader';
 export { default as ResponsiveAppBar } from './FixedBox/FixedBox';
 export { default as NavBarButton } from './NavBarBottom/NavBarBottom';
+export { default as Modal } from './Modal/Modal';
