@@ -42,8 +42,7 @@ const NavBarButton = () => {
         <div>
             <React.Fragment>
                 <AppBar
-                    position="fixed"
-                    
+                    position="fixed"                    
                     sx={{ top: 'auto', bottom: 0, bgcolor:"rgb(0 0 0 / 26%)"}}
                 >
                     <Toolbar >
@@ -56,7 +55,7 @@ const NavBarButton = () => {
                                 sx={{
                                     paddingLeft: '80%'
                                     }}>
-                                <CancelIcon sx={{ fontSize: 40 }} />
+                                <CancelIcon sx={{ fontSize: 40, color: '#9c27b0'}} />
                             </IconButton>                                    
                             <AddContactsForm type={'add'}/>                                  
                         </Dialog>                          
