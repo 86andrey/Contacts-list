@@ -47,29 +47,24 @@ const NavBarButton = () => {
                 <AppBar
                     position="fixed"
                     color="primary"
-                    sx={{ top: 'auto', bottom: 0 }}
+                    sx={{ top: 'auto', bottom: 0, maxWidth: '600px', right:'auto'}}
                 >
                     <Toolbar >
                         <StyledFab color="success" aria-label="add">
                             <Button onClick={handleClickOpen}>
                                 <AddIcon sx={{ color: '#fff' }} />
-                            </Button>
-
-                            
+                            </Button>                            
                             <Dialog open={open} onClose={handleClose} sx={{
                                         position: 'absolute'}}>
                                 <IconButton aria-label="Example"
                                     onClick={handleClose}                                    
                                     sx={{
-                                        position: 'fixed', paddingLeft: '68%'
+                                        position: 'fixed',
+                                        paddingLeft: '68%'
                                     }}>
                                     <CancelIcon sx={{ fontSize: 40 }} />
-                                </IconButton>
-                                    
-                                <AddContactsForm type={'add'}/>                          
-                                {/* <DialogActions>
-                                                                        
-                                </DialogActions> */}
+                                </IconButton>                                    
+                                <AddContactsForm type={'add'}/>                                  
                             </Dialog>              
                         </StyledFab>
                         <Box sx={{ flexGrow: 1 }} />

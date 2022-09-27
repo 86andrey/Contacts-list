@@ -8,7 +8,7 @@ const Filter = ({ onSearch, value }) => {
         value={value}
         type="text"
         name="filter"
-        placeholder='Search contact' />       
+        placeholder='Search ' />       
     </FilterWrapper>
   );
 };

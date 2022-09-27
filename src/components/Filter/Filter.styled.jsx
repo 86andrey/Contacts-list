@@ -19,7 +19,7 @@ export const Input = styled.input`
   border: 2px solid #4287f5;
   border-radius: 5px;
   outline: none;
-width: 200px;
+width: 150px;
   :focus {
     border-color: #4287f5;
   }
