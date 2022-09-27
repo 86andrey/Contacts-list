@@ -38,7 +38,7 @@ const ResponsiveAppBar = () => {
   return (
     <>
       <AppBar >
-        <Container >
+        <Container sx={{ bgcolor:'#5b678a' }} >
           <Toolbar disableGutters >
             {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
@@ -150,7 +150,7 @@ const ResponsiveAppBar = () => {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, }}>
-                  <Avatar alt="Remy Sharp" src="" sx={{ bgcolor: '#8c05aa' }} />
+                    <Avatar alt="Remy Sharp" src="" sx={{ bgcolor: '#8c05aa', border: '2px solid' }} />
                 </IconButton>
               </Tooltip>
 

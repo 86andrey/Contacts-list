@@ -5,7 +5,7 @@ export const Item = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #5b678a;
   background-color: ${props =>
     props.deleting ? 'rgb(252, 7, 3, .1)' : 'transparent'};
   :not(:last-child) {
@@ -22,10 +22,10 @@ export const Contact = styled.p`
 
 export const IconUser = styled(RiUserFill)`
   padding: 3px;
-  border: 1px solid #099e9e;
+  border: 1px solid #5b678a;
   border-radius: 50%;
   margin-right: 10px;
-  color: #09f7f7;
+  color: #5b678a;
 `;
 
 export const Button = styled.button`

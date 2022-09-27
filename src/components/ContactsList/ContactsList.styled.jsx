@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   position: relative;
   flex-grow: 1;
   padding: 20px 40px;
-  background-color: #e6f3fa;
+  background-color: #fff;
 `;
 
 export const Title = styled.h2`

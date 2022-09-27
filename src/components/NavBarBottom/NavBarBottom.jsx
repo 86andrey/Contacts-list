@@ -43,12 +43,12 @@ const NavBarButton = () => {
             <React.Fragment>
                 <AppBar
                     position="fixed"
-                    color="primary"
-                    sx={{ top: 'auto', bottom: 0}}
+                    
+                    sx={{ top: 'auto', bottom: 0, bgcolor:"rgb(0 0 0 / 26%)"}}
                 >
                     <Toolbar >
-                        <StyledFab color="secondary" aria-label="add">                            
-                            <AddIcon onClick={handleClickOpen} sx={{ color: '#fff'}} />
+                        <StyledFab color="secondary" aria-label="add" sx={{  border: '2px solid' }}>                            
+                            <AddIcon onClick={handleClickOpen} sx={{ color: '#fff' }} />
                         </StyledFab>                              
                         <Dialog open={open} onClose={handleClose}>
                             <IconButton aria-label="Example"
