@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
 
 export const FormWrapper = styled.div`
-  padding: 20px 40px;
-  background-color: #e6f3fa;
+  padding: 40px 40px 20px;
+  background-color: #fff;
   // border-bottom: 2px solid #4287f5;
   text-align: center;
 `;
