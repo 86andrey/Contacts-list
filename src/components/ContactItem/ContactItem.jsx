@@ -52,7 +52,9 @@ const ContactItem = ({ id, name, number }) => {
     <Item deleting={isLoading}>
       <Contact>
         <IconUser />
-        {name} : {number}
+        {name}
+        <br />
+        {number}
       </Contact>
       <div>
         {/* {' '} */}
@@ -62,7 +64,7 @@ const ContactItem = ({ id, name, number }) => {
           type="button"
           disabled={isLoading}
         >
-          <RiPencilLine />
+          <RiPencilLine color='#5b678a'/>
         </ButtonEdit>
         <Button
           onClick={() => handleRemoveContact(id)}
@@ -79,7 +81,7 @@ const ContactItem = ({ id, name, number }) => {
               visible={true}
             />
           ) : (
-            <RiDeleteBinLine />
+            <RiDeleteBinLine color='#5b678a'/>
           )}
         </Button>
       </div>
