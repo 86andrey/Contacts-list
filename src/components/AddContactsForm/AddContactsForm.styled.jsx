@@ -4,7 +4,7 @@ import { Field, ErrorMessage } from 'formik';
 export const FormWrapper = styled.div`
   padding: 20px 40px;
   background-color: #e6f3fa;
-  border-bottom: 2px solid #4287f5;
+  // border-bottom: 2px solid #4287f5;
   text-align: center;
 `;
 
@@ -44,30 +44,40 @@ export const Input = styled(Field)`
 `;
 
 export const Button = styled.button`
-  min-width: 100px;
-  padding: 5px 10px;
-
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  background-color: #4287f5;
-  color: #4287f5;
-  background-color: transparent;
-  border: 1px solid #4287f5;
-
-  transition: all 100ms linear;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
   cursor: pointer;
+  display: inline;
+  font-family: Quicksand,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin-right: 20px;
+  padding: 14px 14px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
 
-  :not(:last-child) {
-    margin-right: 10px;
-  }
+:hover {
+  background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
 
-  :hover {
-    color: #fff;
-    border-color: #fff;
-    background-color: #4287f5;
-  }
+@media (min-width: 768px) {
+    font-size: 18px;
+    padding: 18px 34px;
+}
 `;
 
 export const ErrorMsg = styled(ErrorMessage)`
