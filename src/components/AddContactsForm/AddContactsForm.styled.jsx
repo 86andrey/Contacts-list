@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
 
 export const FormWrapper = styled.div`
-  padding: 40px 40px 20px;
+  padding: 10px 40px;
   background-color: #fff;
   // border-bottom: 2px solid #4287f5;
   text-align: center;
+  border-radius: 5px;
 `;
 
 export const FormInner = styled.div`

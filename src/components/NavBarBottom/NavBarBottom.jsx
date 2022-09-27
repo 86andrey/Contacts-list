@@ -11,6 +11,7 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import IconButton from '@mui/material/IconButton';
 import CancelIcon from '@mui/icons-material/Cancel';
+import { pink } from '@mui/material/colors';
 // import { faEllipsisV } from '@fortawesome/free-solid-svg-icons/faEllipsisV';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faInfo } from '@fortawesome/free-solid-svg-icons/faInfo';
@@ -47,26 +48,22 @@ const NavBarButton = () => {
                 <AppBar
                     position="fixed"
                     color="primary"
-                    sx={{ top: 'auto', bottom: 0, maxWidth: '600px', right:'auto'}}
+                    sx={{ top: 'auto', bottom: 0}}
                 >
                     <Toolbar >
-                        <StyledFab color="success" aria-label="add">
-                            <Button onClick={handleClickOpen}>
-                                <AddIcon sx={{ color: '#fff' }} />
-                            </Button>                            
-                            <Dialog open={open} onClose={handleClose} sx={{
-                                        position: 'absolute'}}>
-                                <IconButton aria-label="Example"
-                                    onClick={handleClose}                                    
-                                    sx={{
-                                        position: 'fixed',
-                                        paddingLeft: '68%'
+                        <StyledFab color="secondary" aria-label="add">                            
+                            <AddIcon onClick={handleClickOpen} sx={{ color: '#fff'}} />
+                        </StyledFab>                              
+                        <Dialog open={open} onClose={handleClose}>
+                            <IconButton aria-label="Example"
+                                onClick={handleClose}                                    
+                                sx={{
+                                    paddingLeft: '80%'
                                     }}>
-                                    <CancelIcon sx={{ fontSize: 40 }} />
-                                </IconButton>                                    
-                                <AddContactsForm type={'add'}/>                                  
-                            </Dialog>              
-                        </StyledFab>
+                                <CancelIcon sx={{ fontSize: 40 }} />
+                            </IconButton>                                    
+                            <AddContactsForm type={'add'}/>                                  
+                        </Dialog>                          
                         <Box sx={{ flexGrow: 1 }} />
                     </Toolbar>
                 </AppBar>
