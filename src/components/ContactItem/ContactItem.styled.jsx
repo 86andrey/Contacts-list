@@ -31,28 +31,30 @@ export const IconUser = styled(RiUserFill)`
 export const Button = styled.button`
   width: 30px;
   height: 30px;
+  padding: 0;
   // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-  color: #242323;
+  color: red;
   font-size: 24px;
   border: none;
-  /* border-radius: 50%;
-  border: 1px solid #242323; */
+  border-radius: 50%;
+  // border: 1px solid #fff;
   background-color: transparent;
-
-  transition: color 100ms linear;
+  transition: color 500ms linear;  
   cursor: pointer;
 
   :hover {
-    color: red;
-    /* border: 1px solid #fff; */
+    background-color: red;    
+    color: white;
   }
 `;
 
 export const ButtonEdit = styled(Button)`
+  color: green;
   :hover {
-    color: green;
+    color: white;
+    background-color: green;
   }
 `;

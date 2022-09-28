@@ -20,11 +20,12 @@ export const App = () => {
       {/* <NavBar /> */}
       {/* {isOpenAddForm && <AddContactsForm type={'add'} />} */}
       {/* {isOpenUpdateForm && <AddContactsForm type={'update'} />} */}
-      {isOpenUpdateForm && <Modal/>}
+      
 
       <Filter value={filter} onSearch={e => setFilter(e.target.value)} />
       <ContactsList contacts={filteredContacts} />
-      <NavBarButton/>
+      <NavBarButton />
+      {isOpenUpdateForm && <Modal/>}
     </Container>
   );
 };
