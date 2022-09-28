@@ -39,31 +39,26 @@ const NavBarButton = () => {
     };
 
     return (
-        <div>
-            <React.Fragment>
-                <AppBar
-                    position="fixed"                    
-                    sx={{ top: 'auto', bottom: 0, bgcolor:"rgb(0 0 0 / 26%)"}}
-                >
-                    <Toolbar >
-                        <StyledFab color="secondary" aria-label="add" sx={{  border: '2px solid' }}>                            
-                            <AddIcon onClick={handleClickOpen} sx={{ color: '#fff' }} />
-                        </StyledFab>                              
-                        <Dialog open={open} onClose={handleClose}>
-                            <IconButton aria-label="Example"
-                                onClick={handleClose}                                    
-                                sx={{
-                                    paddingLeft: '80%'
-                                    }}>
-                                <CancelIcon sx={{ fontSize: 40, color: '#9c27b0'}} />
-                            </IconButton>                                    
-                            <AddContactsForm type={'add'}/>                                  
-                        </Dialog>                          
-                        <Box sx={{ flexGrow: 1 }} />
-                    </Toolbar>
-                </AppBar>
-            </React.Fragment>
-        </div>
+        <React.Fragment>
+            <AppBar
+                position="fixed"
+                sx={{ top: 'auto', bottom: 0, bgcolor: "rgb(0 0 0 / 26%)" }}>
+                <Toolbar >
+                    <StyledFab color="secondary" aria-label="add" sx={{ border: '2px solid' }}>
+                        <AddIcon onClick={handleClickOpen} sx={{ color: '#fff' }} />
+                    </StyledFab>
+                    <Dialog open={open} onClose={handleClose}>
+                        <IconButton aria-label="Example"
+                            onClick={handleClose}
+                            sx={{ paddingLeft: '80%' }}>
+                            <CancelIcon sx={{ fontSize: 40, color: '#9c27b0' }} />
+                        </IconButton>
+                        <AddContactsForm type={'add'} />
+                    </Dialog>
+                    <Box sx={{ flexGrow: 1 }} />
+                </Toolbar>
+            </AppBar>
+        </React.Fragment>
     );
 };
 export default NavBarButton;
