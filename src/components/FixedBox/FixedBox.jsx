@@ -13,12 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Logout'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [auth, setAuth] = React.useState(true);
+  const [auth, setAuth] = React.useState();
   
   const handleOpenNavMenu = event => {
     setAnchorElNav(event.currentTarget);
@@ -33,6 +33,7 @@ const ResponsiveAppBar = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+    setAuth(true);
   };
 
   return (
@@ -126,18 +127,21 @@ const ResponsiveAppBar = () => {
             </Box>
    {auth && (
             <Box sx={{ flexGrow: 0 }} >
-              <Button 
+                <Button 
+                  onClick={() => {
+                  alert(`This Page is under construction`);
+                }}
                 sx={{ bgcolor: '#708fad' }}
                 variant="contained"
                 component="label"
               >
                 Register
-                <input hidden accept="/*" multiple type="file" />
+                
               </Button>
 
               <Button
                 onClick={() => {
-                  alert('clicked');
+                  setAuth(false);
                 }}
                 sx={{ ml: 2, bgcolor: '#708fad' }}
                 variant="contained"
